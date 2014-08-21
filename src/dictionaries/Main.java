@@ -32,12 +32,12 @@ public class Main {
 		}
 		catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("ERRO!!!");
+			System.out.println(e.getMessage());
 		}
 	}
 
 	public static void simpleDetectorExample() throws IOException {
-		File idxData = new File("testData/wordnet.data");
+		File idxData = new File("data/test/wordnet.data");
 		IMWEIndex index = new MWEIndex(idxData);
 		index.open();
 		IMWEDetector detector = new Consecutive(index);
